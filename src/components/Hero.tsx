@@ -12,7 +12,7 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onRequestEstimate }) => {
   const sectionRef = useRef<HTMLElement>(null);
-  const bgImageRef = useRef<HTMLDivElement>(null);
+  const bgImageRef = useRef<HTMLImageElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -63,23 +63,18 @@ export const Hero: React.FC<HeroProps> = ({ onRequestEstimate }) => {
       ref={sectionRef}
       className="relative min-h-[92vh] sm:min-h-screen flex items-center justify-center pt-24 pb-16 bg-[#161514] text-stone-100 overflow-hidden"
     >
-      {/* Photo placeholder background */}
+      {/* Existing hero image with its architectural parallax and grading */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <div
+        <img
           ref={bgImageRef}
-          aria-label="Project photo coming soon"
-          role="img"
-          className="absolute inset-0 h-[125%] -top-[12%] w-full bg-[#302923] bg-[linear-gradient(135deg,#302923,#56483d_48%,#221f1b)] will-change-transform"
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85"
+          alt="Residential home with architectural details and exterior finishes"
+          className="w-full h-[125%] -top-[12%] absolute left-0 object-cover object-center filter brightness-[0.42] contrast-[1.08] will-change-transform"
         />
-        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#d4c8b8_0.7px,transparent_0.7px)] [background-size:18px_18px]" />
         {/* Subtle architectural vignette & gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#161514] via-[#161514]/40 to-[#161514]/75 pointer-events-none" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(22,21,20,0.6)_100%)] pointer-events-none" />
       </div>
-      <div className="absolute bottom-6 right-4 z-10 border border-white/20 bg-[#161514]/50 px-3 py-2 text-[9px] uppercase tracking-[0.18em] text-stone-400 sm:right-8">
-        Project photos coming soon
-      </div>
-
       {/* Hero Content */}
       <div
         ref={contentRef}
