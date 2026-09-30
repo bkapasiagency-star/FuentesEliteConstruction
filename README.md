@@ -1,20 +1,13 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Fuentes Elite Construction website
 
-# Run and deploy your AI Studio app
+A single-page React website for Fuentes Elite Construction, built with Vite, TypeScript, Tailwind CSS, GSAP, and Lenis.
 
-This contains everything you need to run your app locally.
+## Run locally
 
-View your app in AI Studio: https://ai.studio/apps/8866e1a1-967a-43d6-bf9b-484d0bb2b4c0
+Install dependencies with `npm install`, then start the development server with `npm run dev`.
 
-## Run Locally
+Create a production build with `npm run build`.
 
-**Prerequisites:**  Node.js
+The estimate forms currently show a demo confirmation. Connect them to a backend after the demo is approved.
 
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Project and service images use placeholders until real photos are added. Ivan's portrait is stored in `public/images/ivan-fuentes.png`.

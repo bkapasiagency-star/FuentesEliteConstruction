@@ -1,6 +1,5 @@
 import React from 'react';
 import { Star, ShieldCheck, Users, Award } from 'lucide-react';
-import { COMPANY_INFO } from '../data/content';
 
 export const TrustBar: React.FC = () => {
   const proofs = [

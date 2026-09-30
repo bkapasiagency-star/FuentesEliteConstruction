@@ -12,7 +12,7 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onRequestEstimate }) => {
   const sectionRef = useRef<HTMLElement>(null);
-  const bgImageRef = useRef<HTMLImageElement>(null);
+  const bgImageRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -59,20 +59,25 @@ export const Hero: React.FC<HeroProps> = ({ onRequestEstimate }) => {
 
   return (
     <section
+      id="top"
       ref={sectionRef}
       className="relative min-h-[92vh] sm:min-h-screen flex items-center justify-center pt-24 pb-16 bg-[#161514] text-stone-100 overflow-hidden"
     >
-      {/* Background Architectural Craftsmanship Imagery with GSAP Parallax and editorial grading */}
+      {/* Photo placeholder background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <img
+        <div
           ref={bgImageRef}
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85"
-          alt="Premium residential architectural masonry, hardscape, and exterior tile craftsmanship in California"
-          className="w-full h-[125%] -top-[12%] absolute left-0 object-cover object-center filter brightness-[0.42] contrast-[1.08] will-change-transform"
+          aria-label="Project photo coming soon"
+          role="img"
+          className="absolute inset-0 h-[125%] -top-[12%] w-full bg-[#302923] bg-[linear-gradient(135deg,#302923,#56483d_48%,#221f1b)] will-change-transform"
         />
+        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#d4c8b8_0.7px,transparent_0.7px)] [background-size:18px_18px]" />
         {/* Subtle architectural vignette & gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#161514] via-[#161514]/40 to-[#161514]/75 pointer-events-none" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(22,21,20,0.6)_100%)] pointer-events-none" />
+      </div>
+      <div className="absolute bottom-6 right-4 z-10 border border-white/20 bg-[#161514]/50 px-3 py-2 text-[9px] uppercase tracking-[0.18em] text-stone-400 sm:right-8">
+        Project photos coming soon
       </div>
 
       {/* Hero Content */}
@@ -95,7 +100,7 @@ export const Hero: React.FC<HeroProps> = ({ onRequestEstimate }) => {
 
         {/* Supporting text */}
         <p className="text-base sm:text-lg md:text-xl text-stone-300 max-w-2xl font-light leading-relaxed mb-10">
-          Tile, concrete, masonry and hardscape work for homes across San Jose and the surrounding Bay Area.
+          I help homeowners across San Jose and the South Bay get tile, concrete, masonry, and hardscape work done right.
         </p>
 
         {/* CTAs */}
@@ -112,7 +117,7 @@ export const Hero: React.FC<HeroProps> = ({ onRequestEstimate }) => {
             href="#projects"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-stone-400/40 hover:border-stone-200 text-stone-200 hover:text-white font-medium text-sm uppercase tracking-wider py-4 px-8 transition-colors bg-white/5 hover:bg-white/10 backdrop-blur-sm"
           >
-            <span>View Our Work</span>
+            <span>See Project Types</span>
           </a>
         </div>
 

@@ -15,10 +15,10 @@ export const WhyChooseUs: React.FC = () => {
             <span className="w-8 h-[1px] bg-[#B85D3B]" />
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1C1A17] mb-4">
-            Why Homeowners Choose Us
+            Why Homeowners Choose Me
           </h2>
           <p className="text-stone-600 text-base sm:text-lg font-light leading-relaxed">
-            Our reputation across the South Bay is built directly on homeowner feedback: consistent daily communication, methodical prep work, and an unhurried, transparent approach.
+            I keep you informed, take care with the prep, and give you honest options throughout the job.
           </p>
         </div>
 

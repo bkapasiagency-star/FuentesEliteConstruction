@@ -1,8 +1,5 @@
 {
   "name": "Fuentes Elite Construction",
-  "description": "Fuentes Elite Construction provides tile, concrete, masonry, flooring and hardscape services for residential and commercial projects in San Jose and surrounding South Bay communities.",
-  "requestFramePermissions": [],
-  "majorCapabilities": [
-    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
-  ]
+  "description": "Ivan Fuentes provides tile, concrete, masonry, flooring, and hardscape services in San Jose and surrounding South Bay communities.",
+  "requestFramePermissions": []
 }

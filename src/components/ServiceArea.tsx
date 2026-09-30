@@ -16,10 +16,10 @@ export const ServiceArea: React.FC = () => {
             Service Area
           </h2>
           <p className="text-stone-700 text-lg sm:text-xl font-serif italic mb-3">
-            "Serving homeowners across San Jose and surrounding South Bay communities."
+            "I work with homeowners across San Jose and the South Bay."
           </p>
           <p className="text-stone-600 text-sm sm:text-base font-light leading-relaxed">
-            Our company is based in San Jose, allowing our crew to provide prompt on-site consultations, reliable morning project arrival times, and dedicated craftsmanship without subcontractor handoffs.
+            I’m based in San Jose and work across nearby South Bay communities.
           </p>
         </div>
 
@@ -71,7 +71,7 @@ export const ServiceArea: React.FC = () => {
               </h3>
 
               <p className="text-stone-300 text-sm font-light leading-relaxed mb-6">
-                By intentionally focusing on San Jose and nearby South Bay cities, Ivan Fuentes and his 8-person crew maintain full control over quality and timeline commitments.
+                I stay close to the work and lead my 8-person crew from start to finish.
               </p>
 
               {/* Verified Cities List */}
@@ -109,7 +109,7 @@ export const ServiceArea: React.FC = () => {
             </div>
 
             <div className="text-xs text-stone-400 pt-2">
-              <span className="text-stone-200 font-medium">Located nearby?</span> Contact Ivan at{' '}
+              <span className="text-stone-200 font-medium">Live nearby?</span> Call me at{' '}
               <a href={COMPANY_INFO.phoneHref} className="text-[#B85D3B] underline underline-offset-2">
                 {COMPANY_INFO.phone}
               </a>{' '}

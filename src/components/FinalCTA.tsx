@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Send, CheckCircle2, ArrowRight } from 'lucide-react';
-import { COMPANY_INFO, SERVICES } from '../data/content';
+import { Phone, MapPin, CheckCircle2, ArrowRight } from 'lucide-react';
+import { COMPANY_INFO } from '../data/content';
 
 interface FinalCTAProps {
   initialService?: string;
@@ -51,7 +51,7 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ initialService }) => {
               </h2>
 
               <p className="text-stone-300 text-lg sm:text-xl font-light mb-8 leading-relaxed">
-                Tell us what you're looking to build, replace or remodel.
+                Tell me what you’d like to build, replace, or remodel. I’ll get back to you to talk it through.
               </p>
 
               <div className="space-y-6 pt-6 border-t border-stone-800">
@@ -71,7 +71,7 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ initialService }) => {
                       {COMPANY_INFO.phone}
                     </a>
                     <p className="text-xs text-stone-400 mt-0.5">
-                      Call or text Ivan directly for prompt responses
+                      Call or text me directly
                     </p>
                   </div>
                 </div>
@@ -99,9 +99,9 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ initialService }) => {
             {/* Reassurance note */}
             <div className="mt-12 p-5 bg-stone-900/60 border border-stone-800/80 text-xs text-stone-300 font-light">
               <span className="font-semibold text-white block mb-1">
-                Zero Pressure Guarantee:
+                No pressure, just a straight conversation:
               </span>
-              Ivan provides direct, honest walkthroughs with clear options. You will never receive aggressive sales calls.
+              I’ll give you clear options and honest advice. The decision is always yours.
             </div>
           </div>
 
@@ -116,7 +116,7 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ initialService }) => {
                   Thank You, {formData.name || 'Friend'}!
                 </h3>
                 <p className="text-stone-300 text-sm max-w-md mx-auto mb-6 leading-relaxed">
-                  Your project details regarding <strong className="text-white">{formData.projectType}</strong> have been received. Ivan Fuentes will review your submission and contact you at <strong className="text-white">{formData.phone}</strong> shortly to discuss your estimate.
+                  I’ll review your <strong className="text-white">{formData.projectType}</strong> request and get back to you at <strong className="text-white">{formData.phone}</strong> to talk through the estimate.
                 </p>
                 <div className="p-4 bg-stone-900 border border-stone-800 text-xs text-stone-400 max-w-md mx-auto mb-8 text-left">
                   <div className="font-mono uppercase text-stone-500 text-[10px] mb-2 tracking-wider">

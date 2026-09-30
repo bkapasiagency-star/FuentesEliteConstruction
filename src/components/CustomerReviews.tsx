@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Star, Quote, ChevronLeft, ChevronRight, CheckCircle2 } from 'lucide-react';
-import { REVIEWS } from '../data/content';
+import { COMPANY_INFO, REVIEWS } from '../data/content';
 
 export const CustomerReviews: React.FC = () => {
   const [activeTab, setActiveTab] = useState<number>(0);
@@ -117,6 +117,16 @@ export const CustomerReviews: React.FC = () => {
               </div>
             </button>
           ))}
+        </div>
+        <div className="mt-8 text-center">
+          <a
+            href={COMPANY_INFO.yelpUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-stone-300 hover:text-white underline underline-offset-4 decoration-stone-600 hover:decoration-[#B85D3B]"
+          >
+            See my Yelp profile
+          </a>
         </div>
       </div>
     </section>

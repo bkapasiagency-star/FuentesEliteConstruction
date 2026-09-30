@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SERVICES } from '../data/content';
+import { PhotoPlaceholder } from './PhotoPlaceholder';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -65,7 +66,7 @@ export const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
             </h2>
           </div>
           <p className="text-stone-600 text-sm sm:text-base font-light max-w-md mt-4 md:mt-0 leading-relaxed">
-            Delivering precision installation, durable structural preparation, and architectural finishes across the South Bay.
+              I take care of the prep and the finish, with work built to last.
           </p>
         </div>
 
@@ -79,13 +80,8 @@ export const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
               >
                 <div>
                   {/* Service Image */}
-                  <div className="relative aspect-[16/10] overflow-hidden bg-stone-200">
-                    <img
-                      src={service.imageUrl}
-                      alt={service.imageAlt}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter saturate-[0.95]"
-                      loading="lazy"
-                    />
+                  <div className="relative">
+                    <PhotoPlaceholder className="aspect-[16/10]" />
                     <div className="absolute top-3 left-3 bg-[#1C1A17]/85 backdrop-blur-xs text-white text-[11px] font-mono px-2 py-0.5 tracking-wider">
                       0{index + 1}
                     </div>

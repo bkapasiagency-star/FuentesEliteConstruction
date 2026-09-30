@@ -63,7 +63,7 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({
               Estimate Request Received
             </h3>
             <p className="text-stone-300 text-sm leading-relaxed max-w-md mx-auto">
-              Thank you, <span className="text-white font-medium">{formData.name}</span>. Ivan Fuentes will review your project details and contact you at <span className="text-white font-medium">{formData.phone}</span> shortly.
+              Thanks, <span className="text-white font-medium">{formData.name}</span>. I’ll review your project and get back to you at <span className="text-white font-medium">{formData.phone}</span>.
             </p>
             <div className="pt-4">
               <button
@@ -87,7 +87,7 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({
                 Request a Free Estimate
               </h3>
               <p className="text-xs text-stone-400 mt-1">
-                Share your project details with Ivan Fuentes for a prompt, transparent quote.
+                Tell me a little about your project and I’ll get back to you.
               </p>
             </div>
 
@@ -198,7 +198,7 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({
                   className="inline-flex items-center gap-2 text-xs text-stone-300 hover:text-white"
                 >
                   <Phone className="w-3 h-3 text-[#B85D3B]" />
-                  <span>Prefer to speak directly? Call Ivan at <strong>{COMPANY_INFO.phone}</strong></span>
+                  <span>Want to talk? Call me at <strong>{COMPANY_INFO.phone}</strong></span>
                 </a>
               </div>
             </form>

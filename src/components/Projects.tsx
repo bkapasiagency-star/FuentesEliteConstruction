@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { ArrowRight, Eye, Maximize2, MapPin } from 'lucide-react';
+import { ArrowRight, MapPin } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { PROJECTS, ProjectItem } from '../data/content';
-import { FullScreenLightbox } from './FullScreenLightbox';
+import { PROJECTS } from '../data/content';
+import { PhotoPlaceholder } from './PhotoPlaceholder';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,7 +13,6 @@ interface ProjectsProps {
 
 export const Projects: React.FC<ProjectsProps> = ({ onRequestEstimate }) => {
   const [activeFilter, setActiveFilter] = useState<string>('ALL');
-  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const sectionRef = useRef<HTMLElement>(null);
   const galleryRef = useRef<HTMLDivElement>(null);
@@ -94,18 +93,6 @@ export const Projects: React.FC<ProjectsProps> = ({ onRequestEstimate }) => {
     );
   }, [activeFilter]);
 
-  const handleOpenLightbox = (index: number) => {
-    setLightboxIndex(index);
-  };
-
-  const handleCloseLightbox = () => {
-    setLightboxIndex(null);
-  };
-
-  const handleNavigateLightbox = (newIndex: number) => {
-    setLightboxIndex(newIndex);
-  };
-
   return (
     <section
       id="projects"
@@ -121,11 +108,11 @@ export const Projects: React.FC<ProjectsProps> = ({ onRequestEstimate }) => {
               <span className="w-8 h-[1px] bg-[#B85D3B]" />
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
-              Work That Speaks For Itself.
+              A Few Projects I’m Proud Of
             </h2>
           </div>
           <p className="text-stone-400 text-sm sm:text-base font-light max-w-md mt-4 md:mt-0 leading-relaxed">
-            Click any project photo to inspect high-resolution details in full screen. Swipe on mobile or use arrow keys to browse.
+            I’ll add photos of my work here soon. In the meantime, here are a few of the projects I take on.
           </p>
         </div>
 
@@ -151,33 +138,20 @@ export const Projects: React.FC<ProjectsProps> = ({ onRequestEstimate }) => {
           ref={galleryRef}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
         >
-          {filteredProjects.map((project, idx) => (
+          {filteredProjects.map((project) => (
             <div
               key={project.id}
-              onClick={() => handleOpenLightbox(idx)}
-              className="project-gallery-card group cursor-pointer relative bg-stone-900 border border-stone-800 hover:border-stone-600 overflow-hidden flex flex-col transition-all duration-300 will-change-transform"
+              className="project-gallery-card group relative bg-stone-900 border border-stone-800 overflow-hidden flex flex-col transition-all duration-300 will-change-transform"
             >
-              {/* Image Container with Full-screen cue */}
+              {/* Project photo placeholder */}
               <div className="relative aspect-[4/3] overflow-hidden bg-stone-950">
-                <img
-                  src={project.imageUrl}
-                  alt={project.imageAlt}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-[0.92] group-hover:brightness-100"
-                  loading="lazy"
-                />
+                <PhotoPlaceholder className="h-full w-full" />
 
                 {/* Category Overlay Tag */}
                 <div className="absolute top-3 left-3 bg-[#1C1A17]/90 backdrop-blur-xs text-stone-300 text-[11px] uppercase tracking-wider px-3 py-1 font-medium border border-stone-700/60">
                   {project.categoryLabel}
                 </div>
 
-                {/* Inspect hover cue */}
-                <div className="absolute inset-0 bg-[#1C1A17]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-white bg-[#1C1A17]/90 px-4 py-2 border border-stone-600">
-                    <Maximize2 className="w-3.5 h-3.5 text-[#B85D3B]" />
-                    <span>View Full Screen</span>
-                  </div>
-                </div>
               </div>
 
               {/* Card Meta Content */}
@@ -210,10 +184,10 @@ export const Projects: React.FC<ProjectsProps> = ({ onRequestEstimate }) => {
               Custom Craftsmanship
             </span>
             <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white">
-              Have a project in mind? Let's talk.
+              Have a project in mind? Let’s talk.
             </h3>
             <p className="text-stone-400 text-sm mt-1">
-              Ivan Fuentes handles site walkthroughs and estimates directly.
+              I handle the walkthrough and estimate myself.
             </p>
           </div>
           <button
@@ -226,18 +200,6 @@ export const Projects: React.FC<ProjectsProps> = ({ onRequestEstimate }) => {
         </div>
       </div>
 
-      {/* Full-Screen Image Lightbox with Swipe Gesture & Keyboard Support */}
-      <FullScreenLightbox
-        projects={filteredProjects}
-        currentIndex={lightboxIndex !== null ? lightboxIndex : 0}
-        isOpen={lightboxIndex !== null}
-        onClose={handleCloseLightbox}
-        onNavigate={handleNavigateLightbox}
-        onRequestEstimate={(projectTitle) => {
-          handleCloseLightbox();
-          onRequestEstimate(projectTitle);
-        }}
-      />
     </section>
   );
 };

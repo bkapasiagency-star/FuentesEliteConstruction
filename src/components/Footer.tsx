@@ -1,6 +1,6 @@
 import React from 'react';
-import { Phone, Mail, MapPin, ArrowUpRight } from 'lucide-react';
-import { COMPANY_INFO, SERVICES } from '../data/content';
+import { Phone, MapPin } from 'lucide-react';
+import { COMPANY_INFO } from '../data/content';
 
 export const Footer: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-stone-800">
           {/* Logo & Bio Column */}
           <div className="lg:col-span-5">
-            <a href="#" className="flex flex-col mb-4 focus:outline-none">
+            <a href="#top" className="flex flex-col mb-4 focus:outline-none">
               <span className="font-serif text-2xl font-bold tracking-wider uppercase text-white">
                 FUENTES ELITE
               </span>
@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
             </a>
 
             <p className="text-stone-400 text-xs sm:text-sm font-light leading-relaxed max-w-sm mb-6">
-              Precision tile installation, architectural concrete, masonry, flooring, and residential improvements led by Ivan Fuentes across San Jose and the South Bay.
+              I take on tile, concrete, masonry, flooring, and home improvement projects across San Jose and the South Bay.
             </p>
 
             <div className="text-xs text-stone-500 font-mono">

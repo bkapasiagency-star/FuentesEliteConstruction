@@ -83,7 +83,7 @@ export const FAQ: React.FC<FAQProps> = ({ onRequestEstimate }) => {
             </h2>
           </div>
           <p className="text-stone-600 text-sm sm:text-base font-light max-w-md mt-4 md:mt-0 leading-relaxed">
-            Straightforward answers regarding construction schedules, material procurement, and California building permits.
+            Here are a few things customers often ask. Have another question? Get in touch.
           </p>
         </div>
 
@@ -165,7 +165,7 @@ export const FAQ: React.FC<FAQProps> = ({ onRequestEstimate }) => {
                 Have a question about your specific property or plans?
               </h4>
               <p className="text-xs sm:text-sm text-stone-600 font-light mt-0.5">
-                Ivan Fuentes is happy to review photos, dimensions, and architectural drawings.
+                Send me photos, measurements, or plans and I’ll take a look.
               </p>
             </div>
           </div>
@@ -182,7 +182,7 @@ export const FAQ: React.FC<FAQProps> = ({ onRequestEstimate }) => {
               onClick={onRequestEstimate}
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3 px-5 bg-[#B85D3B] hover:bg-[#a04e30] text-white text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer"
             >
-              <span>Ask Ivan</span>
+              <span>Ask Me</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </button>
           </div>

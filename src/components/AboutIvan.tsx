@@ -69,9 +69,9 @@ export const AboutIvan: React.FC<AboutIvanProps> = ({ onRequestEstimate }) => {
             <div className="relative bg-white p-3 border border-stone-300 shadow-md">
               <div className="relative aspect-[4/5] overflow-hidden bg-stone-200">
                 <img
-                  src="https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=1000&q=80"
-                  alt="Ivan Fuentes, Founder and Craftsman behind Fuentes Elite Construction"
-                  className="w-full h-full object-cover object-top filter contrast-[1.05]"
+                  src="/images/ivan-fuentes.png"
+                  alt="Ivan Fuentes, owner of Fuentes Elite Construction"
+                  className="w-full h-full object-contain object-bottom"
                   loading="lazy"
                 />
               </div>
@@ -83,7 +83,7 @@ export const AboutIvan: React.FC<AboutIvanProps> = ({ onRequestEstimate }) => {
                       Ivan Fuentes
                     </h3>
                     <p className="text-xs text-stone-500 uppercase tracking-wider">
-                      Owner &amp; Lead Craftsman
+                      Owner &amp; Carpenter
                     </p>
                   </div>
                   <a
@@ -101,7 +101,7 @@ export const AboutIvan: React.FC<AboutIvanProps> = ({ onRequestEstimate }) => {
           {/* Editorial Content */}
           <div ref={contentRef} className="lg:col-span-7 order-1 lg:order-2 will-change-transform">
             <div className="flex items-center gap-2 text-[#B85D3B] text-xs uppercase tracking-[0.25em] font-semibold mb-3">
-              <span>Leadership &amp; Values</span>
+              <span>A Little About Me</span>
               <span className="w-8 h-[1px] bg-[#B85D3B]" />
             </div>
 
@@ -110,15 +110,15 @@ export const AboutIvan: React.FC<AboutIvanProps> = ({ onRequestEstimate }) => {
             </h2>
 
             <p className="text-lg sm:text-xl font-serif text-stone-800 italic leading-relaxed mb-6">
-              "Fuentes Elite Construction is led by Ivan Fuentes, bringing a hands-on approach to residential construction, tile and masonry projects."
+              "I’m Ivan. I take pride in doing the job right and treating your home with respect."
             </p>
 
             <div className="space-y-4 text-stone-700 text-sm sm:text-base font-light leading-relaxed mb-8">
               <p>
-                Ivan believes that quality construction starts with open respect for the homeowner's home and time. Rather than delegating critical steps to unknown subcontractors, Ivan remains directly involved on-site, guiding the crew and answering homeowner questions firsthand.
+                I stay involved on the job, keep you updated, and make time for your questions. Your home matters to me, and I treat it with care.
               </p>
               <p>
-                From recommending smart repairs while walls are down to studs, to explaining mortar curing times and joint layout options, Ivan prioritizes helping homeowners understand the why behind every step.
+                If I find an issue, I’ll show you what I’m seeing, explain your options, and let you decide how to move forward.
               </p>
             </div>
 
@@ -129,7 +129,7 @@ export const AboutIvan: React.FC<AboutIvanProps> = ({ onRequestEstimate }) => {
                   Communication
                 </h4>
                 <p className="text-xs text-stone-600 mt-0.5 font-light">
-                  Daily updates on today's progress and tomorrow's expectations.
+                  I’ll keep you up to date on the work and what comes next.
                 </p>
               </div>
 
@@ -138,7 +138,7 @@ export const AboutIvan: React.FC<AboutIvanProps> = ({ onRequestEstimate }) => {
                   Craftsmanship
                 </h4>
                 <p className="text-xs text-stone-600 mt-0.5 font-light">
-                  Strict precision across tile, concrete flatwork, and stone masonry.
+                  I take care with tile, concrete, and stonework.
                 </p>
               </div>
 
@@ -147,7 +147,7 @@ export const AboutIvan: React.FC<AboutIvanProps> = ({ onRequestEstimate }) => {
                   Attention To Detail
                 </h4>
                 <p className="text-xs text-stone-600 mt-0.5 font-light">
-                  Substrate preparation, waterproof barriers, and clean grout lines.
+                  I focus on the prep that helps the finish last.
                 </p>
               </div>
 
@@ -156,7 +156,7 @@ export const AboutIvan: React.FC<AboutIvanProps> = ({ onRequestEstimate }) => {
                   Helping Homeowners
                 </h4>
                 <p className="text-xs text-stone-600 mt-0.5 font-light">
-                  Giving you the facts to make informed decisions without pressure.
+                  I’ll explain your options and give you room to decide.
                 </p>
               </div>
             </div>
@@ -166,7 +166,7 @@ export const AboutIvan: React.FC<AboutIvanProps> = ({ onRequestEstimate }) => {
                 onClick={onRequestEstimate}
                 className="w-full sm:w-auto py-3.5 px-6 bg-[#1C1A17] hover:bg-[#2b2824] text-white text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer"
               >
-                Schedule A Walkthrough With Ivan
+                Let’s Talk About Your Project
               </button>
               <a
                 href={COMPANY_INFO.phoneHref}
@@ -174,6 +174,16 @@ export const AboutIvan: React.FC<AboutIvanProps> = ({ onRequestEstimate }) => {
               >
                 Direct: {COMPANY_INFO.phone}
               </a>
+            </div>
+
+            <div className="mt-8 border-t border-stone-300 pt-6">
+              <h3 className="font-serif text-lg font-bold text-stone-900 mb-3">Certifications &amp; Licenses</h3>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-stone-700">
+                <li>C-54 Tile Contractor License</li>
+                <li>EMT Certification</li>
+                <li>CPR Certified</li>
+                <li>Carpenter</li>
+              </ul>
             </div>
           </div>
         </div>

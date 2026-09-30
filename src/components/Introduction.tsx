@@ -3,6 +3,7 @@ import { ArrowRight, Check } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { COMPANY_INFO } from '../data/content';
+import { PhotoPlaceholder } from './PhotoPlaceholder';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -81,16 +82,16 @@ export const Introduction: React.FC<IntroductionProps> = ({ onRequestEstimate })
 
             <div className="space-y-5 text-stone-700 text-base sm:text-lg font-light leading-relaxed">
               <p>
-                In residential construction, the final look is only part of the story. True quality is defined by the work that happens before the finish layer is ever applied—leveling subfloors, setting moisture barriers, reinforcing concrete with rebar, and ensuring exact slopes for drainage.
+                I care just as much about the work you don’t see. I level the surface, protect against moisture, reinforce concrete, and check drainage before the finish goes in.
               </p>
               <p>
-                Just as critical is how the project is run. Homeowners deserve clear communication every single day: knowing what is happening, what comes next, and why specific steps are taken.
+                I keep you in the loop each day, so you know what I’m working on, what comes next, and why it matters.
               </p>
               <p className="font-normal text-stone-900 border-l-2 border-[#B85D3B] pl-4 italic">
-                Led by Ivan Fuentes, Fuentes Elite Construction brings a hands-on approach to tile, concrete, masonry and residential improvement projects.
+                I’m Ivan Fuentes. I stay involved on site and take responsibility for the details from start to finish.
               </p>
               <p>
-                Whether remodeling a master bathroom, pouring a new architectural concrete patio, or installing slate over a fireplace, Ivan and his team work directly on-site to ensure work is completed properly down to the millimeter.
+                From a bathroom remodel to a new patio or fireplace tile, I want the finished work to feel right in your home and hold up over time.
               </p>
             </div>
 
@@ -100,25 +101,25 @@ export const Introduction: React.FC<IntroductionProps> = ({ onRequestEstimate })
                 <div className="p-1 bg-stone-200 text-[#B85D3B] mt-0.5">
                   <Check className="w-3.5 h-3.5 stroke-[2.5]" />
                 </div>
-                <span>Direct on-site oversight by Ivan Fuentes</span>
+                <span>I’m hands-on at your project</span>
               </div>
               <div className="flex items-start gap-2.5 text-stone-800">
                 <div className="p-1 bg-stone-200 text-[#B85D3B] mt-0.5">
                   <Check className="w-3.5 h-3.5 stroke-[2.5]" />
                 </div>
-                <span>Daily progress updates &amp; clear milestone planning</span>
+                <span>Clear daily updates</span>
               </div>
               <div className="flex items-start gap-2.5 text-stone-800">
                 <div className="p-1 bg-stone-200 text-[#B85D3B] mt-0.5">
                   <Check className="w-3.5 h-3.5 stroke-[2.5]" />
                 </div>
-                <span>Rigorous substrate prep &amp; waterproofing</span>
+                <span>Careful prep and waterproofing</span>
               </div>
               <div className="flex items-start gap-2.5 text-stone-800">
                 <div className="p-1 bg-stone-200 text-[#B85D3B] mt-0.5">
                   <Check className="w-3.5 h-3.5 stroke-[2.5]" />
                 </div>
-                <span>Transparent options with zero pressure</span>
+                <span>Honest options, no pressure</span>
               </div>
             </div>
 
@@ -127,7 +128,7 @@ export const Introduction: React.FC<IntroductionProps> = ({ onRequestEstimate })
                 onClick={onRequestEstimate}
                 className="inline-flex items-center gap-2 bg-[#1C1A17] hover:bg-[#2e2b26] text-white text-xs uppercase tracking-wider font-semibold py-3.5 px-6 transition-colors shadow-sm cursor-pointer"
               >
-                <span>Discuss Your Project With Ivan</span>
+                <span>Tell Me About Your Project</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
               <a
@@ -139,22 +140,15 @@ export const Introduction: React.FC<IntroductionProps> = ({ onRequestEstimate })
             </div>
           </div>
 
-          {/* Right Column: Architectural Craftsman Imagery */}
+          {/* Right Column: Photo placeholder */}
           <div ref={imageRef} className="lg:col-span-5 relative will-change-transform">
             <div className="relative z-10 bg-stone-100 p-2 border border-stone-200 shadow-md">
-              <div className="relative aspect-[4/5] overflow-hidden bg-stone-200">
-                <img
-                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=80"
-                  alt="Craftsman contractor performing careful surface preparation and masonry work on a residential site"
-                  className="w-full h-full object-cover object-center filter saturate-[0.95]"
-                  loading="lazy"
-                />
-              </div>
+              <PhotoPlaceholder className="aspect-[4/5]" label="More project photos coming soon" />
 
               {/* Caption Overlay */}
               <div className="p-4 bg-white border-t border-stone-200">
                 <p className="text-xs font-serif italic text-stone-900">
-                  "Every millimeter in the preparation stage determines how clean and durable the finished surface will be ten years from now."
+                  "Good prep makes all the difference. I take the time to get it right before the finish goes in."
                 </p>
                 <div className="flex items-center justify-between mt-2 pt-2 border-t border-stone-100 text-[11px] text-stone-500 uppercase tracking-wider">
                   <span>Ivan Fuentes, Owner</span>

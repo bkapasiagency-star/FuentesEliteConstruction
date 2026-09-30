@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Phone } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import { PROCESS_STEPS, COMPANY_INFO } from '../data/content';
 
 interface ProcessProps {
@@ -18,11 +18,11 @@ export const Process: React.FC<ProcessProps> = ({ onRequestEstimate }) => {
               <span className="w-8 h-[1px] bg-[#B85D3B]" />
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1C1A17]">
-              Our 4-Step Process
+              How We’ll Work Together
             </h2>
           </div>
           <p className="text-stone-600 text-sm sm:text-base font-light max-w-md mt-4 md:mt-0 leading-relaxed">
-            Straightforward and structured from initial site evaluation to the final walkthrough.
+            I’ll walk you through the project, keep you informed, and review the finished work with you.
           </p>
         </div>
 
@@ -55,12 +55,12 @@ export const Process: React.FC<ProcessProps> = ({ onRequestEstimate }) => {
 
         {/* Bottom helper prompt */}
         <div className="mt-12 text-center flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-stone-600">
-          <span>Ready to begin Step 01?</span>
+          <span>Ready to get started?</span>
           <button
             onClick={onRequestEstimate}
             className="text-stone-900 font-semibold underline underline-offset-4 hover:text-[#B85D3B] cursor-pointer"
           >
-            Submit project details for review
+            Tell me about your project
           </button>
           <span>or call directly:</span>
           <a

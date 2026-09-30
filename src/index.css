@@ -3,7 +3,6 @@
 @layer base {
   :root {
     --font-serif: 'Cinzel', serif;
-    --font-editorial: 'Newsreader', serif;
     --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   }
 
